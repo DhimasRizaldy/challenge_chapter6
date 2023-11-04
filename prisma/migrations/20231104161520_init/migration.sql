@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE "Galery" ALTER COLUMN "title" DROP NOT NULL,
+ALTER COLUMN "image" DROP NOT NULL,
+ALTER COLUMN "description" DROP NOT NULL;
