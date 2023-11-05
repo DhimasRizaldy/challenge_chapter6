@@ -11,21 +11,21 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // import router
-app.use('/api/v1/', v1router)
+app.use('/api/v1/', v1router);
+app.get('/', (req, res) => {
+  return res.json({
+    status: true,
+    message: "Welcome to Apis - Challenge Chapter 6",
+    error: null,
+    data: null,
+  });
+});
 
 // 404 error handling
 app.use((req, res, next) => {
   res.status(404).json({
     status: false,
     message: "Not Found",
-    data: null,
-  });
-});
-
-app.get('/', (req, res) => {
-  res.status(200).json({
-    status: true,
-    message: "Welcome to Apis - Challenge Chapter 6",
     data: null,
   });
 });
