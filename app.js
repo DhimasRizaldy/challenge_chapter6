@@ -22,6 +22,14 @@ app.use((req, res, next) => {
   });
 });
 
+app.use('/', (req, res) => {
+  res.status(200).json({
+    status: true,
+    message: "Welcome to Apis - Challenge Chapter 6",
+    data: null,
+  });
+});
+
 // 500 error handling
 app.use((err, req, res, next) => {
   console.log(err);
