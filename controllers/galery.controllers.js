@@ -177,7 +177,7 @@ module.exports = {
 
       res.status(200).json({
         status: true,
-        message: 'Gambar Berhasil Dihapus!',
+        message: 'Delete Image Successfuly!',
         data: updateOperation
       });
     } catch (err) {
